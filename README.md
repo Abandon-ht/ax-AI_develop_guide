@@ -83,7 +83,7 @@ sudo docker run -it --net host --rm -v $PWD:/data pulsar2:${version}
     "input_configs": [
       {
         "tensor_name": "images", #onnx模型输入名
-        "calibration_dataset": "coco_1000.tar", #量化数据集包
+        "calibration_dataset": "coco_10.tar", #量化数据集包
         "calibration_size": 4,
         "calibration_mean": [0, 0, 0],
         "calibration_std": [255.0, 255.0, 255.0]
