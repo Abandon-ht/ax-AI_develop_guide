@@ -1,3 +1,5 @@
+### 注意！导出分割模型前需要先参考 [检测模型](yolov8_native.md) 修改检测部分代码
+
 修改 ultralytics/nn/modules/head.py class Segment(Detect):
 ```python
 class Segment(Detect):
@@ -27,3 +29,9 @@ def forward(self, x):
     # return (torch.cat([x, mc], 1), p) if self.export else (torch.cat([x[0], mc], 1), (x[1], mc, p))
     return (x, *mc_, p) if self.export else (torch.cat([x[0], mc], 1), (x[1], mc, p))
 ```
+导出模型
+```bash
+yolo export model=yolov8s-seg.pt format=onnx
+onnxsim yolov8s-seg.onnx yolov8s-seg_sim.onnx
+```
+![](./images/003.png)

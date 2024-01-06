@@ -1,3 +1,5 @@
+### 注意！导出姿态模型前需要先参考 [检测模型](yolov8_native.md) 修改检测部分代码
+
 修改 ultralytics/nn/modules/head.py class Pose(Detect):
 ```python
 class Pose(Detect):
@@ -25,3 +27,9 @@ class Pose(Detect):
         # return torch.cat([x, pred_kpt], 1) if self.export else (torch.cat([x[0], pred_kpt], 1), (x[1], kpt))
         return (x, *kpt_) if self.export else (torch.cat([x[0], pred_kpt], 1), (x[1], kpt))
 ```
+导出模型
+```bash
+yolo export model=yolov8s-pose.pt format=onnx
+onnxsim yolov8s-pose.onnx yolov8s-pose_sim.onnx
+```
+![](./images/002.png)

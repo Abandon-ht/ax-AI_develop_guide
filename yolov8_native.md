@@ -35,3 +35,9 @@
         # return y if self.export else (y, x)
         return x if self.export else (y, x)
 ```
+导出模型
+```bash
+yolo export model=yolov8s.pt format=onnx
+onnxsim yolov8s.onnx yolov8s_sim.onnx 
+```
+![](./images/001.png)
