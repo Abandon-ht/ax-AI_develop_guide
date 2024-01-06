@@ -34,4 +34,4 @@ def forward(self, x):
 yolo export model=yolov8s-seg.pt format=onnx
 onnxsim yolov8s-seg.onnx yolov8s-seg_sim.onnx
 ```
-![](./images/003.png)
+![](../images/003.png)

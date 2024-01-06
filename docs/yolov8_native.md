@@ -40,4 +40,4 @@
 yolo export model=yolov8s.pt format=onnx
 onnxsim yolov8s.onnx yolov8s_sim.onnx 
 ```
-![](./images/001.png)
+![](../images/001.png)

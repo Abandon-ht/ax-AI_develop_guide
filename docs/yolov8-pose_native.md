@@ -32,4 +32,4 @@ class Pose(Detect):
 yolo export model=yolov8s-pose.pt format=onnx
 onnxsim yolov8s-pose.onnx yolov8s-pose_sim.onnx
 ```
-![](./images/002.png)
+![](../images/002.png)
