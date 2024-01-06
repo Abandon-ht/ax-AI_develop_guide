@@ -5,15 +5,13 @@
     "input_configs": [
       {
         "tensor_name": "images",
-        "calibration_dataset": "/data/dataset/coco_1000.tar",
+        "calibration_dataset": "/data/datasets/coco_10.tar",
         "calibration_size": 4,
         "calibration_mean": [0, 0, 0],
         "calibration_std": [255.0, 255.0, 255.0]
       }
     ],
     "calibration_method": "MinMax",
-#    "precision_analysis": true,
-#    "precision_analysis_method":"EndToEnd"
   },
   "input_processors": [
     {
