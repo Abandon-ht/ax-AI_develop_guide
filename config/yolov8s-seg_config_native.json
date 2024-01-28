@@ -24,16 +24,8 @@
   ],
   "output_processors": [
     {
-      "tensor_name": "output0",
-      "dst_perm": [0, 2, 3, 1]
-    },
-    {
-      "tensor_name": "output1",
-      "dst_perm": [0, 2, 3, 1]
-    },
-    {
-      "tensor_name": "416",
-      "dst_perm": [0, 2, 3, 1]
+      "tensor_name": "350",
+      "dst_perm": [0, 1, 2, 3]
     },
     {
       "tensor_name": "357",
@@ -48,7 +40,15 @@
       "dst_perm": [0, 2, 3, 1]
     },
     {
-      "tensor_name": "350",
+      "tensor_name": "output0",
+      "dst_perm": [0, 2, 3, 1]
+    },
+    {
+      "tensor_name": "output1",
+      "dst_perm": [0, 2, 3, 1]
+    },
+    {
+      "tensor_name": "416",
       "dst_perm": [0, 2, 3, 1]
     }
   ],
