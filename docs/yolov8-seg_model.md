@@ -14,6 +14,7 @@
             }
         ],
         "calibration_method": "MinMax",
+        "precision_analysis": true
     },
     "input_processors": [
         {
@@ -51,7 +52,7 @@
         },
         {
             "tensor_name": "350",
-            "dst_perm": [0, 2, 3, 1]
+            "dst_perm": [0, 1, 2, 3]
         }
     ],
     "compiler": {
